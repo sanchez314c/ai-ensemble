@@ -9,7 +9,10 @@
     "build": "electron-builder --linux",
     "build:all": "electron-builder --linux --win --mac"
   },
-  "author": "J. Michaels",
+  "author": {
+    "name": "J. Michaels",
+    "email": "software@jasonpaulmichaels.co"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
