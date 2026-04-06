@@ -1,0 +1,55 @@
+{
+  "name": "ai-ensemble",
+  "version": "1.0.0",
+  "description": "AI Ensemble - Multi-model AI query engine with collaborative synthesis",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron . --no-sandbox",
+    "dev": "NODE_ENV=development electron . --dev --no-sandbox",
+    "build": "electron-builder --linux",
+    "build:all": "electron-builder --linux --win --mac"
+  },
+  "author": {
+    "name": "J. Michaels",
+    "email": "software@jasonpaulmichaels.co"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanchez314c/ai-ensemble.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sanchez314c/ai-ensemble/issues"
+  },
+  "homepage": "https://github.com/sanchez314c/ai-ensemble#readme",
+  "devDependencies": {
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "@electron/rebuild": "^4.0.3",
+    "axios": "^1.7.9",
+    "better-sqlite3": "^11.7.0",
+    "electron-store": "^8.2.0",
+    "uuid": "^11.0.5"
+  },
+  "build": {
+    "appId": "com.mastercontrol.ai-ensemble",
+    "productName": "AI Ensemble",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ]
+  }
+}
